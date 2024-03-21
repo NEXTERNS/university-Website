@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+    rel="stylesheet" />
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <!-- Style -->
+  <title>Document</title>
+  <style>
+    .card {
+      box-shadow: 0px 4px 8px 0px #BDBDBD;
+    }
+
+    /**
+ * Owl Carousel v2.3.4
+ * Copyright 2013-2018 David Deutsch
+ * Licensed under: SEE LICENSE IN https://github.com/OwlCarousel2/OwlCarousel2/blob/master/LICENSE
+ */
+    .owl-theme .owl-dots,
+    .owl-theme .owl-nav {
+      text-align: center;
+      -webkit-tap-highlight-color: transparent
+    }
+
+    .owl-theme .owl-nav {
+      margin-top: 10px
+    }
+
+    .owl-theme .owl-nav [class*=owl-] {
+      color: #FFF;
+      font-size: 14px;
+      margin: 5px;
+      padding: 4px 7px;
+      background: #D6D6D6;
+      display: inline-block;
+      cursor: pointer;
+      border-radius: 3px
+    }
+
+    .owl-theme .owl-nav [class*=owl-]:hover {
+      background: #869791;
+      color: #FFF;
+      text-decoration: none
+    }
+
+    .owl-theme .owl-nav .disabled {
+      opacity: .5;
+      cursor: default
+    }
+
+    .owl-theme .owl-nav.disabled+.owl-dots {
+      margin-top: 10px
+    }
+
+    .owl-theme .owl-dots .owl-dot {
+      display: inline-block;
+      zoom: 1
+    }
+
+    .owl-theme .owl-dots .owl-dot span {
+      width: 10px;
+      height: 10px;
+      margin: 5px 7px;
+      background: #D6D6D6;
+      display: block;
+      -webkit-backface-visibility: visible;
+      transition: opacity .2s ease;
+      border-radius: 30px
+    }
+
+    .owl-theme .owl-dots .owl-dot.active span,
+    .owl-theme .owl-dots .owl-dot:hover span {
+      background: #869791
+    }
+
+    .profile-pic {
+      width: 100px !important;
+      height: 100px;
+      box-shadow: 0px 4px 8px 0px #BDBDBD;
+    }
+
+    .owl-carousel .owl-nav button.owl-next,
+    .owl-carousel .owl-nav button.owl-prev {
+      background: 0 0;
+      color: #1E88E5 !important;
+      border: none;
+      padding: 5px 20px !important;
+      font: inherit;
+      font-size: 50px !important;
+    }
+
+    .owl-carousel .owl-nav button.owl-next:hover,
+    .owl-carousel .owl-nav button.owl-prev:hover {
+      color: #0D47A1 !important;
+      background-color: transparent !important;
+    }
+
+    .owl-dots {
+      display: none;
+    }
+
+    button:focus {
+      -moz-box-shadow: none !important;
+      -webkit-box-shadow: none !important;
+      box-shadow: none !important;
+      outline-width: 0;
+    }
+
+    .item {
+      display: none;
+    }
+
+    .next {
+      display: block !important;
+      position: relative;
+      transform: scale(0.8);
+      transition-duration: 0.3s;
+      opacity: 0.6;
+    }
+
+    .prev {
+      display: block !important;
+      position: relative;
+      transform: scale(0.8);
+      transition-duration: 0.3s;
+      opacity: 0.6;
+    }
+
+    .item.show {
+      display: block;
+      transition-duration: 0.4s;
+    }
+
+    @media screen and (max-width: 999px) {
+
+      .next,
+      .prev {
+        transform: scale(1);
+        opacity: 1;
+      }
+
+      .item {
+        display: block !important;
+      }
+
+      /**
+ * Owl Carousel v2.3.4
+ * Copyright 2013-2018 David Deutsch
+ * Licensed under: SEE LICENSE IN https://github.com/OwlCarousel2/OwlCarousel2/blob/master/LICENSE
+ */
+      .owl-carousel,
+      .owl-carousel .owl-item {
+        -webkit-tap-highlight-color: transparent;
+        position: relative
+      }
+
+      .owl-carousel {
+        display: none;
+        width: 100%;
+        z-index: 1
+      }
+
+      .owl-carousel .owl-stage {
+        position: relative;
+        -ms-touch-action: pan-Y;
+        touch-action: manipulation;
+        -moz-backface-visibility: hidden
+      }
+
+      .owl-carousel .owl-stage:after {
+        content: ".";
+        display: block;
+        clear: both;
+        visibility: hidden;
+        line-height: 0;
+        height: 0
+      }
+
+      .owl-carousel .owl-stage-outer {
+        position: relative;
+        overflow: hidden;
+        -webkit-transform: translate3d(0, 0, 0)
+      }
+
+      .owl-carousel .owl-item,
+      .owl-carousel .owl-wrapper {
+        -webkit-backface-visibility: hidden;
+        -moz-backface-visibility: hidden;
+        -ms-backface-visibility: hidden;
+        -webkit-transform: translate3d(0, 0, 0);
+        -moz-transform: translate3d(0, 0, 0);
+        -ms-transform: translate3d(0, 0, 0)
+      }
+
+      .owl-carousel .owl-item {
+        min-height: 1px;
+        float: left;
+        -webkit-backface-visibility: hidden;
+        -webkit-touch-callout: none
+      }
+
+      .owl-carousel .owl-item img {
+        display: block;
+        width: 100%
+      }
+
+      .owl-carousel .owl-dots.disabled,
+      .owl-carousel .owl-nav.disabled {
+        display: none
+      }
+
+      .no-js .owl-carousel,
+      .owl-carousel.owl-loaded {
+        display: block
+      }
+
+      .owl-carousel .owl-dot,
+      .owl-carousel .owl-nav .owl-next,
+      .owl-carousel .owl-nav .owl-prev {
+        cursor: pointer;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none
+      }
+
+      .owl-carousel .owl-nav button.owl-next,
+      .owl-carousel .owl-nav button.owl-prev,
+      .owl-carousel button.owl-dot {
+        background: 0 0;
+        color: inherit;
+        border: none;
+        padding: 0 !important;
+        font: inherit
+      }
+
+      .owl-carousel.owl-loading {
+        opacity: 0;
+        display: block
+      }
+
+      .owl-carousel.owl-hidden {
+        opacity: 0
+      }
+
+      .owl-carousel.owl-refresh .owl-item {
+        visibility: hidden
+      }
+
+      .owl-carousel.owl-drag .owl-item {
+        -ms-touch-action: pan-y;
+        touch-action: pan-y;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none
+      }
+
+      .owl-carousel.owl-grab {
+        cursor: move;
+        cursor: grab
+      }
+
+      .owl-carousel.owl-rtl {
+        direction: rtl
+      }
+
+      .owl-carousel.owl-rtl .owl-item {
+        float: right
+      }
+
+      .owl-carousel .animated {
+        animation-duration: 1s;
+        animation-fill-mode: both
+      }
+
+      .owl-carousel .owl-animated-in {
+        z-index: 0
+      }
+
+      .owl-carousel .owl-animated-out {
+        z-index: 1
+      }
+
+      .owl-carousel .fadeOut {
+        animation-name: fadeOut
+      }
+
+      @keyframes fadeOut {
+        0% {
+          opacity: 1
+        }
+
+        100% {
+          opacity: 0
+        }
+      }
+
+      .owl-height {
+        transition: height .5s ease-in-out
+      }
+
+      .owl-carousel .owl-item .owl-lazy {
+        opacity: 0;
+        transition: opacity .4s ease
+      }
+
+      .owl-carousel .owl-item .owl-lazy:not([src]),
+      .owl-carousel .owl-item .owl-lazy[src^=""] {
+        max-height: 0
+      }
+
+      .owl-carousel .owl-item img.owl-lazy {
+        transform-style: preserve-3d
+      }
+
+      .owl-carousel .owl-video-wrapper {
+        position: relative;
+        height: 100%;
+        background: #000
+      }
+
+      .owl-carousel .owl-video-play-icon {
+        position: absolute;
+        height: 80px;
+        width: 80px;
+        left: 50%;
+        top: 50%;
+        margin-left: -40px;
+        margin-top: -40px;
+        background: url(owl.video.play.png) no-repeat;
+        cursor: pointer;
+        z-index: 1;
+        -webkit-backface-visibility: hidden;
+        transition: transform .1s ease
+      }
+
+      .owl-carousel .owl-video-play-icon:hover {
+        -ms-transform: scale(1.3, 1.3);
+        transform: scale(1.3, 1.3)
+      }
+
+      .owl-carousel .owl-video-playing .owl-video-play-icon,
+      .owl-carousel .owl-video-playing .owl-video-tn {
+        display: none
+      }
+
+      .owl-carousel .owl-video-tn {
+        opacity: 0;
+        height: 100%;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        transition: opacity .4s ease
+      }
+
+      .owl-carousel .owl-video-frame {
+        position: relative;
+        z-index: 1;
+        height: 100%;
+        width: 100%
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container-fluid px-3 px-sm-5 my-5 text-center">
+    <h4 class="mb-5 font-weight-bold">What Our Client Say</h4>
+    <div class="owl-carousel owl-theme">
+      <div class="item first prev">
+        <div class="card border-0 py-3 px-4">
+          <div class="row justify-content-center">
+            <img src="images/course3.jpg" class="img-fluid profile-pic mb-4 mt-3">
+          </div>
+          <h6 class="mb-3 mt-2">Marielle Haag</h6>
+          <p class="content mb-5 mx-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua Ut enim.</p>
+        </div>
+      </div>
+      <div class="item show">
+        <div class="card border-0 py-3 px-4">
+          <div class="row justify-content-center">
+            <img src="images/course2.jpg" class="img-fluid profile-pic mb-4 mt-3">
+          </div>
+          <h6 class="mb-3 mt-2">Ximena Vegara</h6>
+          <p class="content mb-5 mx-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua Ut enim.</p>
+        </div>
+      </div>
+      <div class="item next">
+        <div class="card border-0 py-3 px-4">
+          <div class="row justify-content-center">
+            <img src="images/course1.jpg" class="img-fluid profile-pic mb-4 mt-3">
+          </div>
+          <h6 class="mb-3 mt-2">John Paul</h6>
+          <p class="content mb-5 mx-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua Ut enim.</p>
+        </div>
+      </div>
+      <div class="item last">
+        <div class="card border-0 py-3 px-4">
+          <div class="row justify-content-center">
+            <img src="images/IMG_0092.JPG" class="img-fluid profile-pic mb-4 mt-3">
+          </div>
+          <h6 class="mb-3 mt-2">William Doe</h6>
+          <p class="content mb-5 mx-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua Ut enim.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="js/main copy.js"></script>
+  <script>
+
+    $(document).ready(function () {
+
+      $('.owl-carousel').owlCarousel({
+        mouseDrag: false,
+        loop: true,
+        margin: 2,
+        nav: true,
+        responsive: {
+          0: {
+            items: 1
+          },
+          600: {
+            items: 1
+          },
+          1000: {
+            items: 3
+          }
+        }
+      });
+
+      $('.owl-prev').click(function () {
+        $active = $('.owl-item .item.show');
+        $('.owl-item .item.show').removeClass('show');
+        $('.owl-item .item').removeClass('next');
+        $('.owl-item .item').removeClass('prev');
+        $active.addClass('next');
+        if ($active.is('.first')) {
+          $('.owl-item .last').addClass('show');
+          $('.first').addClass('next');
+          $('.owl-item .last').parent().prev().children('.item').addClass('prev');
+        }
+        else {
+          $active.parent().prev().children('.item').addClass('show');
+          if ($active.parent().prev().children('.item').is('.first')) {
+            $('.owl-item .last').addClass('prev');
+          }
+          else {
+            $('.owl-item .show').parent().prev().children('.item').addClass('prev');
+          }
+        }
+      });
+
+      $('.owl-next').click(function () {
+        $active = $('.owl-item .item.show');
+        $('.owl-item .item.show').removeClass('show');
+        $('.owl-item .item').removeClass('next');
+        $('.owl-item .item').removeClass('prev');
+        $active.addClass('prev');
+        if ($active.is('.last')) {
+          $('.owl-item .first').addClass('show');
+          $('.owl-item .first').parent().next().children('.item').addClass('prev');
+        }
+        else {
+          $active.parent().next().children('.item').addClass('show');
+          if ($active.parent().next().children('.item').is('.last')) {
+            $('.owl-item .first').addClass('next');
+          }
+          else {
+            $('.owl-item .show').parent().next().children('.item').addClass('next');
+          }
+        }
+      });
+
+    });
+
+
+
+
+
+
+    /**
+ * Owl Carousel v2.3.4
+ * Copyright 2013-2018 David Deutsch
+ * Licensed under: SEE LICENSE IN https://github.com/OwlCarousel2/OwlCarousel2/blob/master/LICENSE
+ */
+    !function (a, b, c, d) {
+      function e(b, c) {
+        this.settings = null, this.options = a.extend({}, e.Defaults, c),
+          this.$element = a(b), this._handlers = {}, this._plugins = {}, this._supress = {},
+          this._current = null, this._speed = null, this._coordinates = [],
+          this._breakpoint = null, this._width = null, this._items = [], this._clones = [],
+          this._mergers = [], this._widths = [], this._invalidated = {}, this._pipe = [],
+          this._drag = {
+            time: null, target: null, pointer: null, stage: {
+              start: null,
+              current: null
+            }, direction: null
+          }, this._states = {
+            current: {},
+            tags: { initializing: ["busy"], animating: ["busy"], dragging: ["interacting"] }
+          },
+          a.each(["onResize", "onThrottledResize"], a.proxy(function (b, c) {
+            this._handlers[c] = a.proxy(this[c], this)
+          }, this)), a.each(e.Plugins,
+            a.proxy(function (a, b) { this._plugins[a.charAt(0).toLowerCase() + a.slice(1)] = new b(this) },
+              this)), a.each(e.Workers, a.proxy(function (b, c) {
+                this._pipe.push({ filter: c.filter, run: a.proxy(c.run, this) })
+              }, this)),
+          this.setup(), this.initialize()
+      } e.Defaults = {
+        items: 3, loop: !1, center: !1,
+        rewind: !1, checkVisibility: !0, mouseDrag: !0, touchDrag: !0, pullDrag: !0, freeDrag: !1,
+        margin: 0, stagePadding: 0, merge: !1, mergeFit: !0, autoWidth: !1, startPosition: 0,
+        rtl: !1, smartSpeed: 250, fluidSpeed: !1, dragEndSpeed: !1, responsive: {},
+        responsiveRefreshRate: 200, responsiveBaseElement: b, fallbackEasing: "swing",
+        slideTransition: "", info: !1, nestedItemSelector: !1, itemElement: "div",
+        stageElement: "div", refreshClass: "owl-refresh", loadedClass: "owl-loaded",
+        loadingClass: "owl-loading", rtlClass: "owl-rtl", responsiveClass: "owl-responsive",
+        dragClass: "owl-drag", itemClass: "owl-item", stageClass: "owl-stage",
+
+        stageOuterClass: "owl-stage-outer", grabClass: "owl-grab"
+      }, e.Width = {
+        Default: "default", Inner: "inner", Outer: "outer"
+      }, e.Type = {
+        Event: "event",
+        State: "state"
+      }, e.Plugins = {}, e.Workers = [{
+        filter: ["width", "settings"],
+        run: function () { this._width = this.$element.width() }
+      }, {
+        filter: ["width",
+
+          "items", "settings"], run: function (a) { a.current = this._items && this._items[this.relative(this._current)] }
+      }, { filter: ["items", "settings"], run: function () { this.$stage.children(".cloned").remove() } }, { filter: ["width", "items", "settings"], run: function (a) { var b = this.settings.margin || "", c = !this.settings.autoWidth, d = this.settings.rtl, e = { width: "auto", "margin-left": d ? b : "", "margin-right": d ? "" : b }; !c && this.$stage.children().css(e), a.css = e } }, { filter: ["width", "items", "settings"], run: function (a) { var b = (this.width() / this.settings.items).toFixed(3) - this.settings.margin, c = null, d = this._items.length, e = !this.settings.autoWidth, f = []; for (a.items = { merge: !1, width: b }; d--;)c = this._mergers[d], c = this.settings.mergeFit && Math.min(c, this.settings.items) || c, a.items.merge = c > 1 || a.items.merge, f[d] = e ? b * c : this._items[d].width(); this._widths = f } }, {
+        filter: ["items", "settings"], run: function () {
+          var b = [], c = this._items, d = this.settings, e = Math.max(2 * d.items, 4), f = 2 * Math.ceil(c.length / 2), g = d.loop && c.length ? d.rewind ? e : Math.max(e, f) : 0, h = "", i = ""; for (g /= 2; g > 0;)b.push(this.normalize(b.length / 2, !0)), h
+        }
+      }}
+  </script>
+</body>
+
+</html>
