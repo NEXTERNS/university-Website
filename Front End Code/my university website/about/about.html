@@ -39,41 +39,40 @@
 </head>
 
 <body>
+     <!-- preloader -->
+  <div class="loader-wrap">
+    <div class="preloader">
+      <div class="preloader-close"><i class="ri-close-fill"></i></div>
+      <div id="handle-preloader" class="handle-preloader">
+        <div class="animation-preloader">
+          <div class="spinner"></div>
+          <div class="txt-loading">
+            <span data-text-preloader="K" class="letters-loading">
+              K
+            </span>
+            <span data-text-preloader="E" class="letters-loading">
+              E
+            </span>
+            <span data-text-preloader="L" class="letters-loading">
+              L
+            </span>
+            <span data-text-preloader="D" class="letters-loading">
+              D
+            </span>
+            <span data-text-preloader="E" class="letters-loading">
+              E
+            </span>
+            <span data-text-preloader="N" class="letters-loading">
+              N
+            </span>
 
-
-    <!-- preloader -->
-    <div class="loader-wrap">
-        <div class="preloader">
-            <div class="preloader-close"><i class="ri-close-fill"></i></div>
-            <div id="handle-preloader" class="handle-preloader">
-                <div class="animation-preloader">
-                    <div class="spinner"></div>
-                    <div class="txt-loading">
-                        <span data-text-preloader="K" class="letters-loading">
-                            K
-                        </span>
-                        <span data-text-preloader="E" class="letters-loading">
-                            E
-                        </span>
-                        <span data-text-preloader="L" class="letters-loading">
-                            L
-                        </span>
-                        <span data-text-preloader="D" class="letters-loading">
-                            D
-                        </span>
-                        <span data-text-preloader="E" class="letters-loading">
-                            E
-                        </span>
-                        <span data-text-preloader="N" class="letters-loading">
-                            N
-                        </span>
-
-                    </div>
-                </div>
-            </div>
+          </div>
         </div>
+      </div>
     </div>
-    <!-- preloader end -->
+  </div>
+  <!-- preloader end -->
+
 
     <!-- Laptop Navbar  -->
     <nav class="navbar main-header">
@@ -82,8 +81,8 @@
                 style="height: 70px; width:70px; padding-left:15px;"></a>
         <ul>
             <li><a href="../index.html">Home</a></li>
-            <li><a href="#" class="active">About</a></li>
-            <li><a href="#">Courses</a></li>
+            <li><a href="#" style="color: blue;">About</a></li>
+            <li><a href="../courses/courses.html">Courses</a></li>
             <li><a href="#">Administrators</a></li>
             <li><a href="#">News</a></li>
             <li><a href="#">Contacts</a></li>
@@ -101,7 +100,7 @@
     </nav>
 
     <!-- Mobile Nav  -->
-    <nav class="mobile-navbar" style="background-color:rgb(221, 221, 230);">
+    <nav class="mobile-navbar" style="background-color:whitesmoke;">
         <header>
             <div class="top">
                 <a href="#" class="logo"><img src="../images/keldenlogo.jpg" alt="keldenlogo"
@@ -112,8 +111,8 @@
             </div>
             <ul>
                 <li><a href="../index.html">Home</a></li>
-                <li><a href="../about/about.html" class="active">About</a></li>
-                <li><a href="#">Courses</a></li>
+                <li><a href="../about/about.html" style="color: blue;">About</a></li>
+                <li><a href="../courses/courses.html">Courses</a></li>
                 <li><a href="#">Administrators</a></li>
                 <li><a href="#">News</a></li>
                 <li><a href="#">Contacts</a></li>
@@ -135,24 +134,24 @@
         <section style="display: block; ">
 
             <div id="carouselExampleFade" class=" carousel slide carousel-fade " data-ride="carousel"
-                style="height: 36vh; background: linear-gradient(to right, blue 40%, #162850 90%);">
-                <div class="carousel-inner container">
+                style="height: auto; background: linear-gradient(to right, blue 40%, #162850 90%);">
+                <div class="carousel-inner container-fluid">
                     <div class="carousel-item  active ">
                         <div class="hero-text" style="margin-top:17vh">
-                            <h1 class="herotextabout">Explore Endless Possibilities and Unlock Your Potential </h1>
+                            <h1 class="herotextabout" data-aos="flip-up">Explore Endless Possibilities and  Unlock Your Potential </h1>
 
                         </div>
                     </div>
                     <div class="carousel-item ">
                         <div class="hero-text" style="margin-top:17vh">
-                            <h1 class="herotextabout">Embark On a Journey Of Discovery At Kelden University</h1>
+                            <h1 class="herotextabout" data-aos="flip-up">Embark On a Journey Of Discovery At Kelden University</h1>
 
                         </div>
                     </div>
 
                     <div class="carousel-item">
                         <div class="hero-text" style="margin-top:17vh">
-                            <h1 class="herotextabout">Welcome To a World Of Boundless Learning And Extraordinary
+                            <h1 class="herotextabout" data-aos="flip-up">Welcome To a World Of Boundless Learning And Extraordinary
                                 Opportunities</h1>
 
                         </div>
@@ -172,30 +171,31 @@
         <!-- images slider section end-->
         <section style="background-color: whitesmoke; height: auto">
             <br><br><br>
-            <div class="container">
+            <div class="container container-fluid">
                 <div>
-                    <h1 class="text-center md-3" style="font-size: 50px;">About</h1>
+                    <h1 class="text-center md-3" style="font-size: 50px;" data-aos="flip-up">About</h1>
                 </div>
                 <br><br>
                 <div class="row d-flex">
                     <div class="col-md-6 d-flex ftco-animate p">
-                        <div class="img img-about align-self-stretch" class="aboutImg">
+                        <div class="img img-about align-self-stretch" class="aboutImg" data-aos="flip-up">
                             <img src="../images/60.JPG" alt="About images" title="about Images" class="w-100 h-75">
                         </div>
                     </div>
-                    <div class="col-md-6 pl-md-5 ftco-animate">
+                    <div class="col-md-6 pl-md-5 ftco-animate" data-aos="flip-down">
                         <h2 class="mb-4">Welcome to KEBHIPS Institute</h2>
                         <p style="font-size: 18px;">We are proud to welcome you to our institute,
                             where academic excellence and professionalism are our top priorities.
                             Our goal is to empower every student to reach their full potential and achieve their
                             academic and professional goals in a friendly and supportive environment.</p>
                         <center>
-                            <button class="learnbtnblue"  title="LEARN MORE ABOUT OUR VISIONS" style="width: 80%;">
+                            <button class="learnbtnblue" data-aos="flip-up" title="LEARN MORE ABOUT OUR VISIONS" style="width: 80%;">
                                 Our Mission & Vision
 
                             </button>
 
                         </center>
+                        <br>
                     </div>
 
                 </div>
@@ -203,24 +203,24 @@
         </section>
 
         <section style="background: linear-gradient(to right, blue 30%, #162850 30%, blue 30%,);">
-            <div  class="container">
-                <div class="listearn">
-                    <div class="contents"  >
-                      <h1 class="numberabout" >30%</h1>
+            <div  class="container h-100 ">
+                <div class="listearn flex-row">
+                    <div class="contents" data-aos="flip-up">
+                      <h1 class="numberabout" data-aos="flip-up">30%</h1>
                       <hr class="breakabout">
-                      <h4 style="color: whitesmoke;">of Our Undergrads are <br> First-in-family College Students</h4>
+                      <h4 style="color: whitesmoke; width:100%; " >of Our Undergrads are <br> First-in-family College  Students</h4>
 
                     </div>
-                    <div class="contents" >
-                      <h1 class="numberabout">90+</h1>
+                    <div class="contents" data-aos="flip-up">
+                      <h1 class="numberabout" data-aos="flip-up">90+</h1>
                       <hr class="breakabout">
-                      <h4 style="color: whitesmoke;">Student Organizations</h4>
+                      <h4 style="color: whitesmoke; width:100%;" class="w-100">Student Organizations <br><br><br></h4>
 
                     </div>
-                    <div class="contents" >
-                      <h1 class="numberabout">99%</h1>
+                    <div class="contents" data-aos="flip-up" >
+                      <h1 class="numberabout" data-aos="flip-up">99%</h1>
                       <hr class="breakabout">
-                      <h4 style="color: whitesmoke;">of Students Receive a Scholarship</h4>
+                      <h4 style="color: whitesmoke; width:100%;">of Students Receive a Scholarship <br><br></h4>
 
                     </div>
                   </div>
@@ -229,12 +229,12 @@
         </section>
 
         <section style="background-color: whitesmoke;">
-                <div  class="container" style="height: 70vh;" >
-                    <div class="listearn flex-row">
-                        <div class="contents" style="width: 35%;" >
+                <div  class="container h-100" >
+                    <div class="listearn flex-row ">
+                        <div class="contents" data-aos="flip-up" >
                             <h3 class="content-list-heading">Who We Are</h3>
    
-                            <ul class="link-list" style="max-width: 70%" >
+                            <ul class="link-list w-75" >
                                     <li>
                                         <a href="#" title="Leadership" class="linkscolor " >
                                             Leadership
@@ -262,10 +262,10 @@
                             </ul> 
 
                         </div>
-                        <div class="contents" style="width: 35%;" >
+                        <div class="contents"  data-aos="flip-up">
                             <h3 class="content-list-heading">ACHIEVEMENTS</h3>
     
-                            <ul class="link-list w-75 " >
+                            <ul class="link-list w-50 " >
                                     <li>
                                         <a href="#"  class="linkscolor" title="Courses Completed">
                                             Courses Completed
@@ -293,10 +293,10 @@
                             </ul> 
 
                         </div>
-                        <div class="contents" style="width: 35%;" >
+                        <div class="contents" data-aos="flip-up" >
                             <h3 class="content-list-heading">Resources and Information </h3>
     
-                            <ul class="link-list w-75">
+                            <ul class="link-list w-50">
                                     <li>
                                         <a href="#" class="linkscolor" title="Facts and Figures">
                                             Kelden Stories/History
@@ -327,11 +327,57 @@
                       </div>
     
                </div>
-            </div>
+            <br><br>
         </section>
 
+    <!--contact administrators section start-->
+
+    <section style="display: block; background: whitesmoke;">
 
 
+        <div class="cardblock-content row flex h-auto" style="padding-left: 7%; padding-right: 1%; ">
+  
+          <div class="col-md-4 cardblock">
+            <div class="card" data-aos="flip-up">
+              <img src="../images/IMG_0087.JPG" class="card-img-top" alt="...">
+              <div class="card-body" data-aos="flip-up">
+                <h1 class="card-title" style="color: blue;">Contact an Admission Counselor</h1>
+                <a href=""><button class="btnt" style="width: 100%;"><i class="fab fa-contact"></i> CONTACT NOW
+                  </button></a>
+  
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 cardblock">
+            <div class="card" data-aos="flip-up">
+              <img src="../images/IMG_0087.JPG" class="card-img-top" alt="...">
+              <div class="card-body" data-aos="flip-up">
+  
+                <h1 class="card-title" style="color: blue;">SCHEDULE A VISIT</h1>
+                <br><br><br>
+                <a href=""><button class="btnt" style="width: 100%;"><i class="fab fa-contact"></i> SCHEDULE A
+                    VISIT</button></a>
+  
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 cardblock">
+            <div class="card" data-aos="flip-up">
+              <img src="../images/IMG_0087.JPG" class="card-img-top" alt="...">
+              <div class="card-body" data-aos="flip-up">
+                <h1 class="card-title" style="color: blue;">Request Information</h1>
+                <br><br>
+  
+                <a href=""><button class="btnt" style="width: 100%;"><i class="fab fa-contact"></i> Request Information
+                  </button></a>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+  
+      </section>
+      <!--contact administrators section end-->
 
 
 
